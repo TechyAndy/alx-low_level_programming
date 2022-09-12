@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * struct/ S4-puts.c for C declaration 
+ * struct 4-puts.c - C declaration 
  * main -for puts
  * Return: 0 after printing the function
  *
