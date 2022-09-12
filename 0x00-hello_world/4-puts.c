@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point 
- * Description -Script that prints C programs
+ *  struct my_struct-Script for C declaration 
+ * main -for puts
  * Return: 0 after printing the function
  *
+ * Description: A clear declaration and print of C programing script.
  **/
 
 int main(void)
