@@ -2,7 +2,7 @@
 
 /**
  * main -prints out size
- *
+ * Description-  Size is not grandeur, and territory does not make a nation
  * Return : Return: 0
  */
 int main(void)
