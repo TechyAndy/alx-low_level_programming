@@ -2,9 +2,9 @@
 
 /**
  *
- * main - for puts
+ * main - Entry point 
  *
- * Return: 0
+ * Return: 0 after printing the function
  *
  **/
 
