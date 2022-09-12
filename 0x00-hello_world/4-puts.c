@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *
+ * Description -Script that prints C programs
  * main - Entry point 
  *
  * Return: 0 after printing the function
