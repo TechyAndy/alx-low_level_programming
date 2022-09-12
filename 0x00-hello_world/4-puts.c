@@ -2,7 +2,7 @@
 
 /**
  *
- * main - main for puts
+ * main - for puts
  *
  * Return: 0
  *
