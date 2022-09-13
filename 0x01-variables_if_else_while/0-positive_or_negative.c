@@ -1,6 +1,6 @@
 /*
  * File: 0-positive_or_negative.c
- * Auth: Brennan D Baraban
+ * Auth: Akpana Temple
  */
 
 #include <stdlib.h>
@@ -28,3 +28,4 @@ int main(void)
 		printf("%d is zero\n", n);
 
 	return (0);
+}
