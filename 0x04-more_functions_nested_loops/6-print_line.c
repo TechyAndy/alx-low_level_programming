@@ -1,32 +1,24 @@
+
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - entry point
- *
- * Description: prints FizzBuzz
- *
- * Return: void
- */
-int main(void)
+* print_line - draws a straight line in the terminal
+* @n: number of times the character _ should be printed
+*/
+void print_line(int n)
 {
-	int n;
+if (n <= 0)
+{
+_putchar('\n');
+} else
+{
+int i;
 
-	for (n = 1; n <= 100; n++)
-	{
-		if ((n % 3 == 0) && (n % 5 == 0))
-			printf("FizzBuzz");
-		else if (n % 5 == 0)
-			printf("Buzz");
-		else if (n % 3 == 0)
-			printf("Fizz");
-		else
-			printf("%i", n);
+for (i = 1; i <= n; i++)
+{
+_putchar('_');
+}
+_putchar('\n');
+}
 
-		if (n < 100)
-			printf(" ");
-		else
-			printf("\n");
-	}
-	return (0);
 }
