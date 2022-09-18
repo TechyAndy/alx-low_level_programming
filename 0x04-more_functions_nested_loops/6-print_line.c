@@ -1,27 +1,30 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * print_line - entry point
+ * main - entry point
  *
- * Description: Prints lines
- *@n: number of lines
+ * Description: prints FizzBuzz
+ *
  * Return: void
  */
-
-void print_line(int n)
+int main(void)
 {
-	int num_lines;
+	int n;
 
-	if (n <= 0)
+	for (n = 1; n <= 100; n++)
 	{
-		_putchar('\n');
+		if ((n % 3 == 0) && (n % 5 == 0))
+			printf("FizzBuzz");
+		else if (n % 5 == 0)
+			printf("Buzz");
+		else if (n % 3 == 0)
+			printf("Fizz");
+		else
+			printf("%i", n);
+
+		if (n < 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	else
-	{
-		for (num_lines = 1; num_lines <= n; num_lines++)
-		{
-			_putchar('_');
-		}
-		_putchar('\n');
-	}
+	return (0);
 }
