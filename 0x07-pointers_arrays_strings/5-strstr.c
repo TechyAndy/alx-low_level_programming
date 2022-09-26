@@ -1,5 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
 #include <stdio.h>
+=======
+>>>>>>> a9939d76b4e7c00777b655d748bc8f1c99273e28
 
 /**
  *  * _strstr - function that locates a substring.
