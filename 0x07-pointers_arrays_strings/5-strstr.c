@@ -1,45 +1,41 @@
 #include "main.h"
-<<<<<<< HEAD
 #include <stdio.h>
-=======
->>>>>>> a9939d76b4e7c00777b655d748bc8f1c99273e28
 
 /**
- *  * _strstr - function that locates a substring.
- *   * @haystack: source string to search through.
- *    * @needle: string to search for.
- *     *
- *      * Return: return beginning of located substring or NULL.
- *       */
+ * _strstr - function that locates a substring.
+ * @haystack: source string to search through.
+ * @needle: string to search for.
+ *
+ * Return: return beginning of located substring or NULL.
+ */
 char *_strstr(char *haystack, char *needle)
 {
-		unsigned int i, z, done;
+	unsigned int i, z, done;
 
-			i = 0;
-				z = 0;
-					done = 0;
-						while (haystack[i] != '\0')
-								{
-											if (needle[z] == haystack[i])
-														{
-																		done = 1;
-																					z++;
+	i = 0;
+	z = 0;
+	done = 0;
+	while (haystack[i] != '\0')
+	{
+		if (needle[z] == haystack[i])
+		{
+			done = 1;
+			z++;
 
-																							}
-													else
-																{
-																				done = 0;
-																							z = 0;
-																									}
+		}
+		else
+		{
+			done = 0;
+			z = 0;
+		}
 
-															if (needle[z] == '\0' && done == 1)
-																			return ((haystack + i - z + 1));
-																	else if (needle[z] == '\0' && done == 0)
-																					return (haystack);
-																			i++;
-																				}
+		if (needle[z] == '\0' && done == 1)
+			return ((haystack + i - z + 1));
+		else if (needle[z] == '\0' && done == 0)
+			return (haystack);
+		i++;
+	}
 
-							return (NULL);
+	return (NULL);
 }
-
 
