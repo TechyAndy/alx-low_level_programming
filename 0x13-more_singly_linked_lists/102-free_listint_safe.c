@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - frees a listint_t linked list
- * @head: the listint_t argument (head)
- * Return: the number of nodes in the list
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 size_t	free_listint_safe(listint_t **head)
 {
