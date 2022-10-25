@@ -7,7 +7,6 @@
  *
  * Return: the number of nodes in the list
  */
-
 size_t	free_listint_safe(listint_t **head)
 {
 	size_t count = 0, i = 0;
