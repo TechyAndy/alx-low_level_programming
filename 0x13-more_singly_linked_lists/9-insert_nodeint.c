@@ -1,97 +1,54 @@
 #include "lists.h"
 
-
-
 /**
+ * insert_nodeint_at_index - inserts a new node at a given position
  *
- *  * insert_nodeint_at_index - inserts a new node at a given position.
+ * @head: the listint_t argument (head)
+ * @idx: the index to insert the node
+ * @n: the int data of the node
  *
- *   * @head: pointer to the list.
- *
- *    * @idx: position to add the node.
- *
- *     * @n: data for the new node.
- *
- *      * Return: the address of the new node, or NULL if it failed
- *
- *       **/
+ * Return: the new node, or NULL if it doesn't exists
+ */
 
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-
+listint_t	*insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
+	unsigned int i = 0;
+	listint_t *new = NULL, *tmp;
 
-		listint_t *aux_node = *head;
+	if (head)
+	{
+		new = malloc(sizeof(listint_t));
+		if (new)
+		{
+			new->n = n;
+			new->next = NULL;
+			tmp = *head;
 
-			listint_t *new_node;
+			if (idx == 0)
+			{
+				new->next = *head;
+				*head = new;
+			}
+			else
+			{
+				while (i != idx - 1 && tmp)
+				{
+					tmp = tmp->next;
+					i++;
+				}
+				if (!tmp)
+				{
+					free(new);
+					return (NULL);
+				}
+				else
+				{
+					new->next = tmp->next;
+					tmp->next = new;
 
-				unsigned int index;
-
-					unsigned int cont = 0;
-
-
-
-						/* create node */
-
-						new_node = malloc(sizeof(listint_t));
-
-							if (new_node == NULL)
-
-										return (NULL);
-
-								new_node->n = n;
-
-
-
-									/* border case for insert at the beginning */
-
-									if (idx == 0)
-
-											{
-
-														new_node->next = *head;
-
-																*head = new_node;
-
-																		return (*head);
-
-																			}
-
-
-
-										/* search of position to insert */
-
-										index = idx - 1;
-
-											while (aux_node && cont != index)
-
-													{
-
-																cont++;
-
-																		aux_node = aux_node->next;
-
-																			}
-
-
-
-												/* general case */
-
-												if (cont == index && aux_node)
-
-														{
-
-																	new_node->next = aux_node->next;
-
-																			aux_node->next = new_node;
-
-																					return (new_node);
-
-																						}
-
-
-
-													free(new_node);
-
-														return (NULL);
-
+				}
+			}
+		}
+	}
+	return (new);
 }
