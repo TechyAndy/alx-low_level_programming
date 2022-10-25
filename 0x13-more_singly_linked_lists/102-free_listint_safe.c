@@ -2,9 +2,7 @@
 
 /**
  * free_listint_safe - frees a listint_t linked list
- *
  * @head: the listint_t argument (head)
- *
  * Return: the number of nodes in the list
  */
 size_t	free_listint_safe(listint_t **head)
