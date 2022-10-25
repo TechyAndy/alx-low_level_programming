@@ -1,57 +1,33 @@
 #include "lists.h"
 
-
-
 /**
+ * add_nodeint_end - adds a new node at the end of a listint_t list
  *
- *  * add_nodeint_end - adds a new node at the end of a listint_t list.
+ * @head: the listint_t argument (head)
+ * @n: the int inside the new node
  *
- *   * @head: pointer to the first element of the list.
- *
- *    * @n: int to set in the new node.
- *
- *     * Return: address of the new element, or NULL if it failed
- *
- *      **/
+ * Return: a pointer to the added node
+ */
 
-listint_t *add_nodeint_end(listint_t **head, const int n)
-
+listint_t	*add_nodeint_end(listint_t **head, const int n)
 {
+	listint_t *node = *head;
+	listint_t *new_node = NULL;
 
-		listint_t *new, *aux = *head;
+	new_node = malloc(sizeof(listint_t));
+	if (new_node)
+	{
+		new_node->n = n;
+		new_node->next = NULL;
 
-
-
-			new = malloc(sizeof(listint_t));
-
-				if (new == NULL)
-
-							return (NULL);
-
-					new->n = n;
-
-						new->next = NULL;
-
-
-
-							if (aux)
-
-									{
-
-												while (aux->next)
-
-																aux = aux->next;
-
-														aux->next = new;
-
-															}
-
-								else
-
-											*head = new;
-
-
-
-									return (new);
-
+		if (!(*head))
+			*head = new_node;
+		else
+		{
+			while (node->next)
+				node = node->next;
+			node->next = new_node;
+		}
+	}
+	return (new_node);
 }
