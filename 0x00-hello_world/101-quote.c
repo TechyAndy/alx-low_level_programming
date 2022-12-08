@@ -10,7 +10,7 @@
 int main(void)
 {
 	char *string;
-	char str1[] = "and that piece of art is useful\"";
+	char str1[] = "and that piece of art is useful\n";
 	char str2[] = "- Dora Korpar, 2015-10-19";
 
 	string = malloc(strlen(str1) + strlen(str2) + 1);
