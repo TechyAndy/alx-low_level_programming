@@ -1,6 +1,6 @@
 /*
  * File: 9-print_comb.c
- * Auth: Brennan D Baraban
+ * Auth: Julien Barbier
  */
 
 #include <stdio.h>
@@ -12,13 +12,14 @@
  */
 int main(void)
 {
-  int num;
-	
-      for (num = 0; num <= 9; num++)
+	int num;
+
+	for (num = 0; num <= 9; num++)
 	{
 		putchar((num % 10) + '0');
 		if (num == 9)
 			continue;
+		
 		putchar(',');
 		putchar(' ');
 	}
